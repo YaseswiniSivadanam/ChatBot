@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #464343;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.header .logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.header .nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.header .nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header .nav li {
+  margin-left: 15px;
+  position: relative;
+}
+
+.header .nav a {
+  display: block;
+  color: hsl(340, 12%, 95%);
+  padding: 10px 15px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.header .nav a:hover,
+.header .nav .dropdown button:hover {
+  background-color: #555;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown button {
+  background-color: #333;
+  color: hsl(340, 12%, 95%);
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 15px;
+}
+
+.dropdown .content {
+  display: none;
+  position: absolute;
+  background-color: hsl(0, 0%, 95%);
+  min-width: 150px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown .content button {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  color: black;
+  border: none;
+  text-align: left;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.dropdown:hover .content {
+  display: block;
+}
+
+.dropdown:hover button {
+  background-color: #555;
+}
+
+.dropdown .content button:hover {
+  background-color: #333;
+  color: white;
+}
+
+.dropdown .content button.selected {
+  background-color: #333;
+  color: white;
+}
